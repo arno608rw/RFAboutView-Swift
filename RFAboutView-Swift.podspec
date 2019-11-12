@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "RFAboutView-Swift"
+  s.name             = "RFAboutView-Swift-4.2"
   s.version          = "2.0.3"
   s.summary          = "A drop-in 'about view' offering information about an app, the pods used and diagnostic debug information."
   s.description      = <<-DESC
@@ -15,11 +15,11 @@ Its main features are:
 * Displays acknowledgements for all Cocoapods used in the project. The acknowledgements file automatically created by Cocoapods is used for this, requiring almost no work on your part. See the "Automatic acknowledgements" below for more information.
 * Clean and modern design with lots of customisation options.
                         DESC
-  s.homepage         = "https://github.com/fouquet/RFAboutView-Swift"
+  s.homepage         = "https://github.com/arno608rw/RFAboutView"
 s.screenshots      = "https://fouquet.me/RFAboutView/screenshot1.png", "https://fouquet.me/RFAboutView/screenshot2.png", "https://fouquet.me/RFAboutView/screenshot3.png"
   s.license          = 'MIT'
   s.author           = { "René Fouquet" => "mail@fouquet.me" }
-  s.source           = { :git => "https://github.com/fouquet/RFAboutView-Swift.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/arno608rw/RFAboutView-Swift.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/renefouquet'
 
   s.platform     = :ios, '9.0'
