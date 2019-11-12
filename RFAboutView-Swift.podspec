@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "RFAboutView-Swift-4.2"
+  s.name             = "RFAboutView-Swift"
   s.version          = "2.0.3"
   s.summary          = "A drop-in 'about view' offering information about an app, the pods used and diagnostic debug information."
   s.description      = <<-DESC
