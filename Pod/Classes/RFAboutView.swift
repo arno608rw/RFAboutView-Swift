@@ -18,70 +18,70 @@ public enum CloseButtonSide {
 open class RFAboutViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,MFMailComposeViewControllerDelegate,SFSafariViewControllerDelegate {
     
     /// Tint color of the RFAboutViewController. Defaults to black color.
-    open var tintColor = UIColor.black
+    @objc open var tintColor = UIColor.black
     
     /// Background color of the RFAboutViewController. Defaults to a light gray color.
-    open var backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
+    @objc open var backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1)
     
     /// Color of the text in the header. Defaults to black color.
-    open var headerTextColor = UIColor.black
+    @objc open var headerTextColor = UIColor.black
     
     /// Border color of the header. Defaults to light gray color.
-    open var headerBorderColor = UIColor.lightGray
+    @objc open var headerBorderColor = UIColor.lightGray
     
     ///  Background color of the header. Defaults to white color.
-    open var headerBackgroundColor = UIColor.white
+    @objc open var headerBackgroundColor = UIColor.white
     
     /// Acknowledgements header text color. Defaults to black color.
-    open var acknowledgementsHeaderColor = UIColor.black
+    @objc open var acknowledgementsHeaderColor = UIColor.black
     
     /// TableView background color. Defaults to white color.
-    open var tableViewBackgroundColor = UIColor.white
+    @objc open var tableViewBackgroundColor = UIColor.white
     
     /// Background Color of the selected tableview cell.
-    open var tableViewSelectionColor: UIColor?
+    @objc open var tableViewSelectionColor: UIColor?
     
     /// TableView text color. Defaults to black color.
-    open var tableViewTextColor = UIColor.black
+    @objc open var tableViewTextColor = UIColor.black
     
     /// TableView separator color. Defaults to black color with alpha 0.5
-    open var tableViewSeparatorColor = UIColor.black.withAlphaComponent(0.5)
+    @objc open var tableViewSeparatorColor = UIColor.black.withAlphaComponent(0.5)
     
     /// Background Color of the Navigation Bar.
-    open var navigationViewBackgroundColor: UIColor?
+    @objc open var navigationViewBackgroundColor: UIColor?
     
     /// Bar Tint Color of the Navigation Bar.
-    open var navigationBarBarTintColor: UIColor?
+    @objc open var navigationBarBarTintColor: UIColor?
     
     /// Tint color of the Navigation Bar. Defaults to the view's default tint color.
-    open var navigationBarTintColor: UIColor?
+    @objc open var navigationBarTintColor: UIColor?
     
     /// Color of the Navigation Bar Title. Defaults to blackColor.
-    open var navigationBarTitleTextColor = UIColor.black
+    @objc open var navigationBarTitleTextColor = UIColor.black
     
     /// The background of the about header. Defaults to nil.
-    open var headerBackgroundImage: UIImage?
+    @objc open var headerBackgroundImage: UIImage?
     
     /// The image for the button to dismiss the RFAboutViewController. Defaults to image of "X".
-    open var closeButtonImage = UIImage(named: "Frameworks/RFAboutView_Swift.framework/RFAboutView_Swift.bundle/RFAboutViewCloseX")
+    @objc open var closeButtonImage = UIImage(named: "Frameworks/RFAboutView_Swift.framework/RFAboutView_Swift.bundle/RFAboutViewCloseX")
     
     /// Determines if the close button should be an image, or text.
-    open var closeButtonAsImage = true
+    @objc open var closeButtonAsImage = true
     
     /// The text of the close button, if not an image
-    open var closeButtonText = NSLocalizedString("Close", comment:"Close button text")
+    @objc open var closeButtonText = NSLocalizedString("Close", comment:"Close button text")
     
     /// The position of the close button (left or right side)
     open var closeButtonSide: CloseButtonSide = .leftSide
     
     /// Determines if the header background image should be blurred. Defaults to true.
-    open var blurHeaderBackground = true
+    @objc open var blurHeaderBackground = true
     
     /// Effect style of the header blur. Defaults to UIBlurEffectStyleLight.
-    open var blurStyle: UIBlurEffect.Style = .light
+    @objc open var blurStyle: UIBlurEffect.Style = .light
     
     /// Determines if diagnostic information (app title, version, build, device etc.) should be included in the email when the user taps the email link. This information can be very useful to debug certain problems and can be deleted by the user if they don't want to send this information. Defaults to true.
-    open var includeDiagnosticInformationInEmail = true
+    @objc open var includeDiagnosticInformationInEmail = true
     
     /// Determines if the acknowledgements tableview should be shown. Defaults to true.
     @objc open var showAcknowledgements = true
@@ -90,55 +90,55 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
     @objc open var showsScrollIndicator = true
     
     /// File name of the acknowledgements plist *without* extension. Defaults to "Acknowledgements".
-    open var acknowledgementsFilename = "Acknowledgements"
+    @objc open var acknowledgementsFilename = "Acknowledgements"
     
     /// The name of the app. Leave nil to use the CFBundleName.
-    @objc public var appName: String?
+    @objc open var appName: String?
     
     /// The current version of the app. Leave nil to use CFBundleShortVersionString.
-    @objc public var appVersion: String?
+    @objc open var appVersion: String?
     
     /// The current build of the app. Leave nil to use CFBundleVersion.
-    open var appBuild: String?
+    @objc open var appBuild: String?
     
     /// The name of the person or entity who should appear as the copyright holder.
-    open var copyrightHolderName: String?
+    @objc open var copyrightHolderName: String?
     
     /// The email address users can send inquiries to (for example a support email address). Leave nil to skip.
-    @objc public var contactEmail: String?
+    @objc open var contactEmail: String?
     
     /// The text to use for the email link. Leave nil to use the email address as text.
-    @objc public var contactEmailTitle: String?
+    @objc open var contactEmailTitle: String?
     
     /// The URL for the website link. Leave nil to skip.
-    public var websiteURL: URL?
+    @objc open var websiteURL: URL?
     
     /// The title for the website link. Leave nil to use the website URL.
-    public var websiteURLTitle: String?
+    @objc open var websiteURLTitle: String?
     
     /// The year the app's version was published. Used in the copyright text. Leave nil to use the current year.
-    public var pubYear: String?
+    @objc open var pubYear: String?
     
     /// Font used for the app name
-    open var fontAppName: UIFont?
+    @objc open var fontAppName: UIFont?
     
     /// Font used for the copyright information text
-    open var fontCopyrightInfo: UIFont?
+    @objc open var fontCopyrightInfo: UIFont?
     
     /// Font used for the website button label
-    open var fontWebsiteButton: UIFont?
+    @objc open var fontWebsiteButton: UIFont?
     
     /// Font used for the email button label
-    open var fontEmailButton: UIFont?
+    @objc open var fontEmailButton: UIFont?
     
     /// Font used for the label on top of the "pods used" table
-    open var fontHeaderLabel: UIFont?
+    @objc open var fontHeaderLabel: UIFont?
     
     /// Font used for the "pods used" table cell label
-    open var fontTableCellText: UIFont?
+    @objc open var fontTableCellText: UIFont?
     
     /// Font used for the license text in the pod detail view
-    open var fontLicenseText: UIFont?
+    @objc open var fontLicenseText: UIFont?
     
     private var acknowledgements = [[String:String]]()
     private var metrics: [String:CGFloat]!
@@ -588,17 +588,17 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         dismiss(animated: true, completion: nil)
     }
     
-    @objc public func goToWebsite() {
+    @objc open func goToWebsite() {
         let webVC = SFSafariViewController(url: websiteURL!)
         webVC.delegate = self
         present(webVC, animated: true, completion: nil)
     }
     
-    open func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+    @objc open func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    @objc public func email() {
+    @objc open func email() {
         let iOSVersion = UIDevice.current.systemVersion as String
         let device = UIDevice.current.model as String
         let deviceString = platformModelString()
@@ -637,7 +637,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         }
     }
     
-    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    @objc open func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: { () -> Void in
             if result.rawValue == MFMailComposeResult.failed.rawValue {
                 let alert = UIAlertController(title: NSLocalizedString("Message Failed!", comment: "Sending email message failed"), message: NSLocalizedString("Your email has failed to send.", comment: "Sending email message failed body"), preferredStyle: UIAlertController.Style.alert)
@@ -656,11 +656,11 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
      - parameter title:   The title of the button
      - parameter content: The text to display in the detail view
      */
-    @objc public func addAdditionalButton(_ title: String, content: String) {
+    @objc open func addAdditionalButton(_ title: String, content: String) {
         additionalButtons.append([title:content])
     }
     
-    open func addAcknowledgement(_ title: String, content: String) {
+    @objc open func addAcknowledgement(_ title: String, content: String) {
         acknowledgements.append([title:content])
     }
     
