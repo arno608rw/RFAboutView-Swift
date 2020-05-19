@@ -588,7 +588,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         dismiss(animated: true, completion: nil)
     }
     
-    open func goToWebsite() {
+    public func goToWebsite() {
         let webVC = SFSafariViewController(url: websiteURL!)
         webVC.delegate = self
         present(webVC, animated: true, completion: nil)
@@ -598,7 +598,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         controller.dismiss(animated: true, completion: nil)
     }
     
-    open func email() {
+    public func email() {
         let iOSVersion = UIDevice.current.systemVersion as String
         let device = UIDevice.current.model as String
         let deviceString = platformModelString()
@@ -637,7 +637,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         }
     }
     
-    open func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: { () -> Void in
             if result.rawValue == MFMailComposeResult.failed.rawValue {
                 let alert = UIAlertController(title: NSLocalizedString("Message Failed!", comment: "Sending email message failed"), message: NSLocalizedString("Your email has failed to send.", comment: "Sending email message failed body"), preferredStyle: UIAlertControllerStyle.alert)
@@ -656,7 +656,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
      - parameter title:   The title of the button
      - parameter content: The text to display in the detail view
      */
-    open func addAdditionalButton(_ title: String, content: String) {
+    public func addAdditionalButton(_ title: String, content: String) {
         additionalButtons.append([title:content])
     }
     
