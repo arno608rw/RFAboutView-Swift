@@ -84,10 +84,10 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
     open var includeDiagnosticInformationInEmail = true
     
     /// Determines if the acknowledgements tableview should be shown. Defaults to true.
-    open var showAcknowledgements = true
+    @objc open var showAcknowledgements = true
     
     /// Determines if the main scrollview should show a scroll indicator. Defaults to true.
-    open var showsScrollIndicator = true
+    @objc open var showsScrollIndicator = true
     
     /// File name of the acknowledgements plist *without* extension. Defaults to "Acknowledgements".
     open var acknowledgementsFilename = "Acknowledgements"
