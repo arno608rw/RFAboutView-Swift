@@ -93,10 +93,10 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
     open var acknowledgementsFilename = "Acknowledgements"
     
     /// The name of the app. Leave nil to use the CFBundleName.
-    open var appName: String?
+    public var appName: String?
     
     /// The current version of the app. Leave nil to use CFBundleShortVersionString.
-    open var appVersion: String?
+    public var appVersion: String?
     
     /// The current build of the app. Leave nil to use CFBundleVersion.
     open var appBuild: String?
@@ -105,19 +105,19 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
     open var copyrightHolderName: String?
     
     /// The email address users can send inquiries to (for example a support email address). Leave nil to skip.
-    open var contactEmail: String?
+    public var contactEmail: String?
     
     /// The text to use for the email link. Leave nil to use the email address as text.
-    open var contactEmailTitle: String?
+    public var contactEmailTitle: String?
     
     /// The URL for the website link. Leave nil to skip.
-    open var websiteURL: URL?
+    public var websiteURL: URL?
     
     /// The title for the website link. Leave nil to use the website URL.
-    open var websiteURLTitle: String?
+    public var websiteURLTitle: String?
     
     /// The year the app's version was published. Used in the copyright text. Leave nil to use the current year.
-    open var pubYear: String?
+    public var pubYear: String?
     
     /// Font used for the app name
     open var fontAppName: UIFont?
