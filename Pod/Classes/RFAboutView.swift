@@ -350,7 +350,6 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         showDetailViewController(theDict)
     }
     
-    
     private func showDetailViewController(_ infoDictionary: [String:String]) {
         let viewController = RFAboutViewDetailViewController(infoDictionary: infoDictionary)
         viewController.showsScrollIndicator = showsScrollIndicator
@@ -458,7 +457,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         tableView.cellLayoutMarginsFollowReadableWidth = false
         tableView.separatorColor = tableViewSeparatorColor
         tableView.backgroundColor = UIColor.clear
-        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.rowHeight = UITableView.UITableViewAutomaticDimension
         tableView.estimatedRowHeight = sizeForPercent(12.5)
         if additionalButtons.count > 0 {
             scrollViewContainer.addSubview(tableView)
@@ -500,7 +499,7 @@ open class RFAboutViewController: UIViewController,UITableViewDataSource,UITable
         tableView.separatorInset = UIEdgeInsets.zero
         tableView.cellLayoutMarginsFollowReadableWidth = false
         tableView.separatorColor = tableViewSeparatorColor
-        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.rowHeight = UITableView.UITableViewAutomaticDimension
         tableView.estimatedRowHeight = sizeForPercent(12.5)
         if showAcknowledgements {
             scrollViewContainer.addSubview(tableView)
